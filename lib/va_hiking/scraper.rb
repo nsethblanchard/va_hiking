@@ -1,5 +1,4 @@
 
-
 class VaHiking::Scraper
     
     def self.scrape_hike_type
@@ -11,7 +10,7 @@ class VaHiking::Scraper
         end  
     end
 
-    def self.scrape_hike_names(geoloc)
+    def self.scrape_hikes(geoloc)
         VaHiking::Hike.new("Molly's Knob Trail", geoloc)
         VaHiking::Hike.new("Mountainside Trail", geoloc)
     end

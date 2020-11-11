@@ -1,10 +1,9 @@
 
-
 class VaHiking::GeoLoc
 
     @@all = []
-    attr_accessor :name
-    attr_writer :hike_names
+    attr_accessor :name, :hike_names
+    
 
     def initialize(name)
         @name = name
@@ -17,9 +16,8 @@ class VaHiking::GeoLoc
         @@all
     end
 
-    def hike_names
-        VaHiking::Scraper.scrape_hike_names(self) if @hike_names.empty?
-        @hike_names
+    def get_hike_names
+        VaHiking::Scraper.scrape_hikes(self) if @hike_names.empty?
     end
 
     def save
