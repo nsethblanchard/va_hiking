@@ -6,6 +6,7 @@ require_relative "./va_hiking/scraper"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 module VaHiking
   class Error < StandardError; end
