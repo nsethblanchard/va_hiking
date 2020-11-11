@@ -1,7 +1,8 @@
 require_relative "./va_hiking/version"
 require_relative "./va_hiking/cli"
-require_relative "./va_hiking/hiketype"
+require_relative "./va_hiking/geoloc"
 require_relative "./va_hiking/scraper"
+require_relative "./va_hiking/hike"
 
 require 'pry'
 require 'nokogiri'

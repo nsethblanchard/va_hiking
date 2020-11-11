@@ -13,7 +13,7 @@ class VaHiking::CLI
     end
 
     def hike_type
-        @hike_type = VaHiking::HikeType.all
+        @hike_type = VaHiking::GeoLoc.all
         
     end
 
@@ -27,16 +27,26 @@ class VaHiking::CLI
     def get_user_hike
         chosen_hike = gets.strip.to_i
         if chosen_hike.between?(1, @hike_type.length) 
-            puts "Here is some information about #{@hike_type[chosen_hike-1].name}.\n".colorize(:light_blue)
-            get_nearest_hikes
+            puts "Here are some hikes of the \"#{@hike_type[chosen_hike-1].name}\" variety.\n".colorize(:light_blue)
+            get_nearest_hikes(chosen_hike)
         else
             puts  "Please enter only the number for the type of hike."
             get_user_hike
         end
     end
 
-    def get_nearest_hikes
-        puts "Getting there..."
+    def get_nearest_hikes(chosen_hike)
+        hike_type = @hike_type[chosen_hike-1]
+        hikes = hike_type.hike_names
+        
+
+        #need to tie into VaHiking::HikeType.hike_names
+
+        #her code is:
+        #month = @months[chosen_month - 1]
+        #events = month.events 
+
+
         #possibly VaHiking::Hike or something and iterate over all of the possibles within that type
         #Start to parse out the available hikes within the type of hikes on website 
         #(start thinking about what to do with the types who don't have pretty data)
