@@ -10,13 +10,15 @@ def initialize(name)
     save
 end
 
+def self.all
+   VaHiking::Scraper.scrape_hike_type if @@all.empty?
+   @@all
+end
+
 def save
     @@all << self
 end
 
-def self.all
-    @@all
-end
 
 
 

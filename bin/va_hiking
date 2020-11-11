@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 require_relative '../lib/environment'
+ require 'openssl'
+    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+
+
 
 
 VaHiking::CLI.new.call

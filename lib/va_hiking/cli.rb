@@ -13,22 +13,15 @@ class VaHiking::CLI
     end
 
     def hike_type
-        # VaHiking::HikeType.new("Waterfall Hikes")
-        # VaHiking::HikeType.new("Hiking with Kids")
-        #this will be scraped eventually from https://www.virginia.org/hikingvirginia
-        #figure out how to check for standard data in each category and programmatically
-        #exclude types which don't match desired structure? ie don't have a "nearest town"?
         @hike_type = VaHiking::HikeType.all
         
-        # @hike_type = ["Waterfall Hikes", "Hiking with Kids", "Bucket List Hikes", 
-        # "Summits with 360 Degree Views", "Appalachian Trail Hikes", 
-        # "Shenandoah National Park Hikes", "Blue Ridge Parkway Hikes", "Backpacking Trips"]
     end
 
     def print_hike
         puts "\nPlease pick the number for the hike you are most interested in today!"
         @hike_type.each.with_index(1) do |hike, index| 
             puts "#{index}. #{hike.name}"
+        # binding.pry
         end
     end
 
