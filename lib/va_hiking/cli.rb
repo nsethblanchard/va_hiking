@@ -16,7 +16,7 @@ class VaHiking::CLI
     def get_location
         puts "\nPlease pick the number for the type of hike you are most interested in today!".colorize(:light_blue)
         @location.each.with_index(1) do |loc, index| 
-            puts "#{index}. #{loc.name}"
+            puts "#{index.to_s.colorize(:light_blue)}. #{loc.name}"
         end
     end
 
@@ -35,7 +35,7 @@ class VaHiking::CLI
         type = @location[chosen_hike-1]
         type.get_hike_names
         type.hike_names.each.with_index(1) do |hike, index|
-            puts "#{index}. #{hike.name}"
+            puts "\n#{index.to_s.colorize(:light_blue)}. #{hike.name}\n"
         end
     end
 
