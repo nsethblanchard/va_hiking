@@ -43,7 +43,7 @@ class VaHiking::CLI
         puts "Did you find the hike you were looking for (y/n)?".colorize(:light_blue)
         @answer = gets.chomp.downcase
         if @answer != "y" && @answer != "n"
-            puts "Could you either enter only a \"y\" or a \"n\"?".colorize(:red)
+            puts "Please enter only a \"y\" or an \"n\"?".colorize(:red)
             do_over_success?
         end
         
