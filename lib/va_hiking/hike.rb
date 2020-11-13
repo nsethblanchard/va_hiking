@@ -2,13 +2,11 @@
 class VaHiking::Hike
 
     @@all = []
-    attr_accessor :name, :geoloc, :description
+    attr_accessor :name, :geoloc
     
-    def initialize(name, geoloc) #tack on a description?
+    def initialize(name, geoloc)
         @name = name
         @geoloc = geoloc    
-        @description = description  #tie into the listed description for each hike
-        #should I also do the URL?
         add_to_geoloc
         save
     end

@@ -42,16 +42,17 @@ class VaHiking::CLI
     def do_over_success?
         puts "Did you find the hike you were looking for (y/n)?".colorize(:light_blue)
         @answer = gets.chomp.downcase
-        if @answer != "y" && @answer != "n"
-            puts "Please enter only a \"y\" or an \"n\"?".colorize(:red)
-            do_over_success?
-        end
         
         if @answer == "y"
             puts "Thanks and enjoy your hike!".colorize(:light_blue)
         else 
             do_over_again
         end
+        
+        if @answer != "y" && @answer != "n"
+            puts "Please enter only a \"y\" or an \"n\"?".colorize(:red)
+            do_over_success?
+        end  
     end
         
     def do_over_again
