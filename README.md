@@ -1,6 +1,6 @@
 # VaHiking
 
-Discover places to hike in the great state of Virginia based on the the type of hiking you want to be doing
+Welcome to VaHiking! An application which helps you discover places to hike in the great state of Virginia based on the the type of hiking you want to be doing
 and proximity to your location.
 
 ## Installation
